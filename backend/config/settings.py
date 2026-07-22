@@ -124,10 +124,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "http://localhost:4173",
-    "https://themillennialschool-jp86.vercel.app",
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://themillennialschool-jp86-.*\.vercel\.app$",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.vercel.app",
 ]
 
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
