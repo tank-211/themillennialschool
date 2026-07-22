@@ -25,10 +25,45 @@ export function EnquiryForm({ compact = false }: { compact?: boolean }) {
 
   return (
     <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        setSubmitted(true);
-      }}
+    onSubmit={async (e) => {
+      e.preventDefault();
+
+      const form = e.currentTarget;
+      const formData = new FormData(form);
+
+      const data = {
+        parent_name: formData.get("parent"),
+        phone: formData.get("phone"),
+        email: formData.get("email"),
+        child_name: formData.get("child"),
+        grade: formData.get("grade"),
+        visit_date: formData.get("visitDate") || null,
+        city: formData.get("city"),
+        message: formData.get("message"),
+      };
+
+      try {
+        const response = await fetch("http://127.0.0.1:8000/api/enquiry/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+          setSubmitted(true);
+          form.reset();
+        } else {
+          const error = await response.json();
+          console.error(error);
+          alert("Failed to submit enquiry.");
+        }
+      } catch (err) {
+        console.error(err);
+        alert("Could not connect to the server.");
+      }
+    }}
       className={`rounded-2xl border border-border bg-card ${compact ? "p-5" : "p-6 md:p-8"}`}
     >
       <h3 className="font-display text-xl md:text-2xl font-semibold">Admission Enquiry</h3>
