@@ -43,7 +43,7 @@ export function EnquiryForm({ compact = false }: { compact?: boolean }) {
       };
 
       try {
-        const response = await fetch("http://127.0.0.1:8000/api/enquiry/", {
+        const response = await fetch("https://themillennialschool.onrender.com/api/enquiry/", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
