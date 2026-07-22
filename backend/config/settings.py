@@ -124,8 +124,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
+CORS_ALLOWED_ORIGINS = [
+    "https://themillennialschool.vercel.app",
+    "https://themillennialschool-jp86.vercel.app",
+]
+
 CORS_ALLOWED_ORIGIN_REGEXES = [
-    r"^https://themillennialschool-jp86-.*\.vercel\.app$",
+    r"^https://themillennialschool-.*\.vercel\.app$",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
