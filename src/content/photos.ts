@@ -2,11 +2,13 @@
 //import campusExterior from "@/assets/school/campus-entrance.jpeg";
 import campusEntrance from "@/assets/school/campus-entrance.jpeg";
 import classroomPrimary from "@/assets/school/classroom-primary.png";
-//import classroomWriting from "@/assets/school/classroom-writing.jpg";
+import classroomWriting from "@/assets/school/classroom-writing.jpeg";
 import preprimaryClass from "@/assets/school/preprimary-class.jpeg";
-//import yogaActivity from "@/assets/school/yoga-activity.jpg";
+import yogaActivity from "@/assets/school/yoga-activity.jpeg";
+import OutdoorActivity from "@/assets/school/outdoor-activity.jpeg";
+import IndoorActivity from "@/assets/school/indoor-activity.jpeg";
 import homeHero from "@/assets/school/home-hero.png";
-//import smartClassroom from "@/assets/school/smart-classroom.png";
+import smartClassroom from "@/assets/school/smart-classroom.jpeg";
 import computerLab1 from "@/assets/school/computer-lab-1.png";
 import computerLab2 from "@/assets/school/computer-lab-2.png";
 import library1 from "@/assets/school/library-1.jpeg";
@@ -15,6 +17,7 @@ import corridorStairs from "@/assets/school/corridor-stairs.jpeg";
 import corridorPreprimary from "@/assets/school/corridor-preprimary.jpeg";
 import corridorSuccess from "@/assets/school/corridor-success.jpeg";
 import cctvMonitoring from "@/assets/school/cctv-monitoring.jpeg";
+import watertank from "@/assets/school/watertank.jpeg";
 import scienceLab1 from "@/assets/school/science-lab-1.jpeg";
 import scienceLab2 from "@/assets/school/science-lab-2.jpeg";
 import chemistryLab1 from "@/assets/school/chemistry-lab-1.jpeg";
@@ -36,10 +39,12 @@ export const photos = {
   //campusExterior: campusExterior,
   campusEntrance: campusEntrance,
   classroomPrimary: classroomPrimary,
-  //classroomWriting: classroomWriting,
+  classroomWriting: classroomWriting,
   preprimaryClass: preprimaryClass,
-  //yogaActivity: yogaActivity,
-  //smartClassroom: smartClassroom,
+  yogaActivity: yogaActivity,
+  OutdoorActivity: OutdoorActivity,
+  IndoorActivity: IndoorActivity,
+  smartClassroom: smartClassroom,
   computerLab: computerLab1,
   computerLab2: computerLab2,
   library: library1,
@@ -48,6 +53,7 @@ export const photos = {
   corridorPreprimary: corridorPreprimary,
   corridorSuccess: corridorSuccess,
   cctvMonitoring: cctvMonitoring,
+  watertank: watertank,
   scienceLab: scienceLab1,
   scienceLab2: scienceLab2,
   chemistryLab: chemistryLab1,
@@ -65,15 +71,18 @@ export const gallery: Photo[] = [
   { src: corridorPreprimary, alt: "Bright pre-primary corridor with decorations", category: "Campus" },
   { src: corridorSuccess, alt: "Corridor with 'Steps of Success' display board", category: "Campus" },
   { src: cctvMonitoring, alt: "CCTV monitoring screen for campus-wide safety", category: "Facilities" },
-  //{ src: smartClassroom, alt: "Smart classroom with mounted display and student desks", category: "Classrooms" },
+  { src: watertank, alt: "School watertank with clean water supply", category: "Facilities" },
+  { src: smartClassroom, alt: "Smart classroom with mounted display and student desks", category: "Classrooms" },
   { src: classroomPrimary, alt: "Students seated attentively in a primary classroom", category: "Classrooms" },
-  //{ src: classroomWriting, alt: "Teacher guiding students during a writing lesson", category: "Classrooms" },
+  { src: classroomWriting, alt: "Teacher guiding students during a writing lesson", category: "Classrooms" },
   { src: preprimaryClass, alt: "Pre-primary teacher with young learners around an activity table", category: "Classrooms" },
   { src: library1, alt: "School library shelves stocked with reference books", category: "Library" },
   { src: library2, alt: "Colourful library collection organised in glass cabinets", category: "Library" },
   { src: computerLab1, alt: "Computer lab with rows of desktops and monitors", category: "Computer Lab" },
   { src: computerLab2, alt: "Computer lab workstations with printer and study posters", category: "Computer Lab" },
-  //{ src: yogaActivity, alt: "Students in a yoga session on the school veranda", category: "Activities" },
+  { src: yogaActivity, alt: "Students in a yoga session on the school veranda", category: "Activities" },
+  { src: OutdoorActivity, alt: "Students engaged in outdoor activities", category: "Activities" },
+  { src: IndoorActivity, alt: "Students participating in indoor activities", category: "Activities" },
   { src: scienceLab1, alt: "Science lab with glassware, shelves and periodic table", category: "Science Lab" },
   { src: scienceLab2, alt: "Science lab entrance signage", category: "Science Lab" },
   { src: chemistryLab1, alt: "Chemistry lab reagent shelves with glassware", category: "Science Lab" },
